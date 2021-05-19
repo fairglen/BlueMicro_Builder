@@ -21,7 +21,7 @@ jobs:
         # keyboard configuration. Multiple configs can be setup following this example: ['left','right']
         keyboard_config: ['left','right']
         # hardware configuration. must have both components of the path in the BlueMicro_BLE keyboard examples path
-        hardware_config: ['bluemicro840']
+        hardware_config: ['nicenano']
         # Available options
         # feather52832 - use this for most nRF52832 based boards (needs Arduino_nRF52_Bootloader)
         # bluemicro_nrf52840

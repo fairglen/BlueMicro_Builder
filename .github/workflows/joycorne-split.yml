@@ -79,15 +79,15 @@ jobs:
         if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
         run: |
           rm -r BlueMicro_BLE
-      - name: check back in the changes to this repo
-        if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
-        run: |
-          ls -l
-          git config --global user.name 'gh-actions'
-          git config --global user.email 'gh-actions@noreply.github.com'
-          git add ${{ steps.job_variables.outputs.firmware-name }}
-          git commit -m "Initialized ${{ steps.job_variables.outputs.firmware-name }} using GitHub Actions"
-          git push
+      # - name: check back in the changes to this repo
+      #   if: ${{ steps.job_conditions.outputs.firmware-here == 'false' }}
+      #   run: |
+      #     ls -l
+      #     git config --global user.name 'gh-actions'
+      #     git config --global user.email 'gh-actions@noreply.github.com'
+      #     git add ${{ steps.job_variables.outputs.firmware-name }}
+      #     git commit -m "Initialized ${{ steps.job_variables.outputs.firmware-name }} using GitHub Actions"
+      #     git push
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
